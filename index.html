@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Elizabeth Adelakin</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+.container {
+  padding: 40px 20px;
+  animation: fadeIn 2s ease-in;
+}
+h1 {
+  font-size: 42px;
+  animation: bounce 2s infinite;
+}
+h2 {
+  font-weight: normal;
+}
+.card {
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 600px;
+  backdrop-filter: blur(6px);
+  animation: slideUp 1.5s ease;
+}
+.countdown {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #fff8dc;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+@keyframes slideUp {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+.heart {
+  font-size: 30px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎂 Happy Birthday 🎂</h1>
+  <h2>Elizabeth Adelakin 💖</h2>
+  <p class="heart">❤️💖❤️</p>
+  <div class="card">
+    <h3>💌 A Message For You</h3>
+    <p>
+      Dear Mom, Elizabeth Adelakin,<br><br>
+      You are truth itself, strength itself, and love itself.<br>
+      Your honesty, your fashion sense, your love for cooking, perfumes, and even American Cola make you so beautifully unique.<br><br>
+      Today I celebrate YOU — the queen of my heart.<br><br>
+      With love,<br>
+      Akorede Omobolaji 💕
+    </p>
+  </div>
+  <div class="card">
+    <h3>🎁 Things I Love About You</h3>
+    <p>
+      ✔ Your truthfulness<br>
+      ✔ Your style & fashion sense<br>
+      ✔ Your amazing cooking<br>
+      ✔ Your love for me<br>
+      ✔ Your sweet personality<br>
+      ✔ Your warm heart ❤️
+    </p>
+  </div>
+  <div class="card">
+    <h3>⏳ Countdown to Your Next Birthday</h3>
+    <p id="countdown" class="countdown"></p>
+  </div>
+  <div class="card">
+    <h3>🎵 Birthday Music Vibes</h3>
+    <p>
+      Play while reading 🎧:<br><br>
+      • Happy Birthday (Afrobeat remix)<br>
+      • Beyoncé – “Love on Top”<br>
+      • Adele – “Make You Feel My Love”<br>
+      • Instrumental piano birthday mix
+    </p>
+<button onclick="alert('Happy Birthday Mom ❤️🎉')">Click for Surprise</button>
+  </div>
+</div>
+<script>
+// Countdown to next birthday (June 11 - adjust if needed)
+let birthday = new Date("June 11, 2027 00:00:00").getTime();
+let x = setInterval(function() {
+  let now = new Date().getTime();
+  let distance = birthday - now;
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("countdown").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "🎉 It's Birthday Time! 🎉";
+  }
+}, 1000);
+</script>
+</body>
+</html>
